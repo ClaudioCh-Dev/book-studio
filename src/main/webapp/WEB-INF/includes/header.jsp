@@ -1,7 +1,9 @@
+<link rel="stylesheet" href="css/spinner.css">
+
 <header
 	class="header position-fixed d-flex align-items-center px-3 bg-body border-bottom">
 
-	<!-- Botón Menu -->
+	<!-- Botn Menu -->
 	<button class="btn btn-link nav-link d-md-none" type="button"
 		data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
 		aria-controls="offcanvasSidebar">
@@ -12,7 +14,7 @@
 	<div
 		class="d-flex flex-grow-1 justify-content-between align-items-center">
 
-		<!-- Espacio vacío para mantener la alineación -->
+		<!-- Espacio vaco para mantener la alineacin -->
 		<div class="d-md-none me-5"></div>
 
 		<!-- Logo -->
@@ -26,7 +28,7 @@
 		<!-- Contenedor para botones de tema y usuario -->
 		<div class="d-flex align-items-center">
 
-			<!-- Botón cambiar tema -->
+			<!-- Botn cambiar tema -->
 			<div class="dropdown me-2">
 				<jsp:include page="buttonTheme.jsp">
 					<jsp:param name="menuType" value="1" />
@@ -36,7 +38,7 @@
 			<!-- Separador -->
 			<div class="d-flex align-items-center me-2">
 				<div class="vr d-none d-lg-block mx-2 sprtor"></div>
-				<!-- Ocultar en pantallas pequeñas y mostrar en pantallas grandes -->
+				<!-- Ocultar en pantallas pequeas y mostrar en pantallas grandes -->
 			</div>
 
 
@@ -52,33 +54,37 @@
 					<li><hr class="dropdown-divider"></li>
 					<li><button class="dropdown-item logout-item"
 							data-bs-toggle="modal" data-bs-target="#logoutModal">Cerrar
-							Sesión</button></li>
+							Sesin</button></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </header>
 
-<!-- Modal de Confirmación -->
+<div id="spinner-overlay" class="spinner-overlay">
+    <div class="spinner"></div>
+</div>
+
+<!-- Modal de Confirmacin -->
 <div class="modal fade" id="logoutModal" tabindex="-1"
 	aria-labelledby="logoutModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title text-body-emphasis" id="logoutModalLabel">Confirmar
-					Cierre de Sesión</h5>
+					Cierre de Sesiï¿½n</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<p>¿Estás seguro de que deseas cerrar tu sesión?</p>
+				<p>ï¿½Estï¿½s seguro de que deseas cerrar tu sesiï¿½n?</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-outline-secondary static-style"
 					data-bs-dismiss="modal">Cancelar</button>
 				<button type="button" class="btn btn-danger"
 					onclick="window.location.href='LogoutServlet'">Cerrar
-					Sesión</button>
+					Sesiï¿½n</button>
 			</div>
 		</div>
 	</div>
@@ -90,3 +96,4 @@
 				window.location.href = '/BookStudio/login.jsp';
 			});
 </script>
+<script src="js/spinner.js"></script>
